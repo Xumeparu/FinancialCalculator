@@ -26,8 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const livingWage = 12284; // прожиточный минимум по Новосибирской области
         const familyBudget = Number(familyIncome.value) - (Number(communalPayments.value) + Number(livingWage * numberOfFamilyMembers.value));
+        const creditBody = Number(creditAmount.value) / Number(creditTerm.value);
 
-        if (familyBudget < creditAmount.value) {
+        console.log(creditBody);
+
+        if (familyBudget < creditBody) {
             result.innerHTML = "<h3 id='warning'>К сожалению, Вы не можете взять кредит на данную сумму</h3>";
             document.body.append(result);
         } else {
