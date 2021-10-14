@@ -1,0 +1,98 @@
+body {
+    font-family: "Consolas", serif;
+    font-size: 14pt;
+    color: #171717;
+
+    margin-left: 2%;
+}
+
+h1 {
+    font-size: 26pt;
+    color: #56587d;
+}
+
+h3 {
+    font-size: 20pt;
+    color: #8183bb;
+}
+
+div {
+    margin: 3%;
+}
+
+#main {
+    width: 700px;
+}
+
+button {
+    font-family: "Consolas", serif;
+    font-size: 20pt;
+    color: #ffffff;
+
+    height: 40px;
+    width: 250px;
+
+    background: #56587d;
+
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+button:active {
+    color: #b4b4b4;
+}
+
+input {
+    font-family: "Consolas", serif;
+    font-size: 14pt;
+    color: #171717;
+
+    height: 25px;
+    width: 150px;
+
+    background-color:rgba(0, 0, 0, 0.05);
+
+    outline: none;
+    border: none;
+    border-radius: 5px;
+
+    float: right;
+}
+
+#warning {
+    color: #ce3030;
+}
+
+th {
+    color: #ffffff;
+
+    background: #8183bb;
+
+    outline: none;
+    border: none;
+    border-radius: 5px;
+
+    height: 25px;
+    width: 150px;
+
+    padding: 2px;
+}
+
+td {
+    text-align: right;
+
+    background-color:rgba(0, 0, 0, 0.05);
+
+    outline: none;
+    border: none;
+    border-radius: 5px;
+
+    padding: 2px;
+}
+
+#number {
+    text-align: left;
+
+    width: 50px;
+}

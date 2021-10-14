@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Финансовый калькулятор</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="FinancialCalculator.js"></script>
+</head>
+<body>
+<div id="main">
+    <h1>Финансовый калькулятор</h1>
+    <h3>Дифференцированная схема кредитования</h3>
+    <div>
+        <label>
+            Сумма кредита, в рублях
+            <input
+                    id="creditAmount"
+                    placeholder="0"
+                    type="number"
+                    value=""
+                    min="0"
+            />
+        </label>
+    </div>
+    <div>
+        <label>
+            Процентная ставка, в % годовых
+            <input
+                    id="interestRate"
+                    placeholder="0"
+                    type="number"
+                    value=""
+                    min="0"
+            />
+        </label>
+    </div>
+    <div>
+        <label>
+            Срок кредита, в месяцах
+            <input
+                    id="creditTerm"
+                    placeholder="1"
+                    type="number"
+                    value=""
+                    min="1"
+            />
+        </label>
+    </div>
+    <br/>
+    <div>
+        <label>
+            Официальный доход семьи, в рублях
+            <input
+                    id="familyIncome"
+                    placeholder="0"
+                    type="number"
+                    value=""
+                    min="0"
+            />
+            в месяц
+        </label>
+    </div>
+    <div>
+        <label>
+            Число членов семьи
+            <input
+                    id="numberOfFamilyMembers"
+                    placeholder="1"
+                    type="number"
+                    value=""
+                    min="1"
+            />
+        </label>
+    </div>
+    <div>
+        <label>
+            Коммунальные платежи, в рублях
+            <input
+                    id="communalPayments"
+                    placeholder="0"
+                    type="number"
+                    value=""
+                    min="0"
+            />
+        </label>
+    </div>
+    <button type="submit" id="gettingResult">Рассчитать</button>
+    <button type="submit" id="clearingResult">Очистить</button>
+</div>
+
+</body>
+</html>
