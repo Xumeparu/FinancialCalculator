@@ -24,6 +24,23 @@ div {
     width: 700px;
 }
 
+input {
+    font-family: "Consolas", serif;
+    font-size: 14pt;
+    color: #171717;
+
+    height: 25px;
+    width: 150px;
+
+    background-color:rgba(0, 0, 0, 0.05);
+
+    outline: none;
+    border: none;
+    border-radius: 5px;
+
+    float: right;
+}
+
 button {
     font-family: "Consolas", serif;
     font-size: 20pt;
@@ -41,23 +58,6 @@ button {
 
 button:active {
     color: #b4b4b4;
-}
-
-input {
-    font-family: "Consolas", serif;
-    font-size: 14pt;
-    color: #171717;
-
-    height: 25px;
-    width: 150px;
-
-    background-color:rgba(0, 0, 0, 0.05);
-
-    outline: none;
-    border: none;
-    border-radius: 5px;
-
-    float: right;
 }
 
 #warning {

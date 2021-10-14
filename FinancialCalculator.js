@@ -28,8 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const familyBudget = Number(familyIncome.value) - (Number(communalPayments.value) + Number(livingWage * numberOfFamilyMembers.value));
         const creditBody = Number(creditAmount.value) / Number(creditTerm.value);
 
-        console.log(creditBody);
-
         if (familyBudget < creditBody) {
             result.innerHTML = "<h3 id='warning'>К сожалению, Вы не можете взять кредит на данную сумму</h3>";
             document.body.append(result);
