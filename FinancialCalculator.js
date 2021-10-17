@@ -43,8 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
         removeResultDiv();
 
         let amount = Number(creditAmount.value);
-        let period = Number(creditTerm.value);
         let rate = Number(interestRate.value) / 100 / 12;
+        let period = Number(creditTerm.value);
 
         let differentiatedPayment = 0;
         let percents = 0;
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
             remainingAmount = Number(remainingAmount - balanceOwed).toFixed(2);
             differentiatedPayment = Number(percents) + Number(balanceOwed);
             str += `<tr>
-                <td id="number">${i + 1}</td>
+                <td id='number'>${i + 1}</td>
                 <td>${differentiatedPayment}</td>
                 <td>${percents}</td>
                 <td>${balanceOwed}</td>
