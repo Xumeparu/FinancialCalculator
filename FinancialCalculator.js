@@ -14,12 +14,24 @@ document.addEventListener("DOMContentLoaded", () => {
     result.id = "result";
 
     gettingResult.addEventListener("click", () => {
-        creditCheck();
+        emptinessCheck();
     });
 
     clearingResult.addEventListener("click", () => {
         clearResult();
     });
+
+    function emptinessCheck() {
+        if (Number(creditAmount.value) === 0 || Number(interestRate.value) === 0 ||
+            Number(creditTerm.value) === 0 || Number(familyIncome.value) === 0 ||
+            Number(numberOfFamilyMembers.value) === 0 || Number(communalPayments.value) === 0) {
+            result.innerHTML = "<h3 id='warning'>Некорректные данные</h3>";
+            document.body.append(result);
+            return 0;
+        }
+
+        creditCheck();
+    }
 
     function creditCheck() {
         removeResultDiv();
@@ -29,7 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const creditBody = Number(creditAmount.value) / Number(creditTerm.value);
 
         if (familyBudget < creditBody) {
-            result.innerHTML = "<h3 id='warning'>К сожалению, Вы не можете взять кредит на данную сумму</h3>";
+            result.innerHTML = "<h3 id='warning'>К сожалению, Вы не можете взять кредит на данную сумму,</h3>" +
+                               "<h3 id='warning'>так как кредитный платеж превышает бюджет семьи</h3>";
             document.body.append(result);
         } else {
             if (creditAmount.value !== "" && interestRate.value !== "" && creditTerm.value !== "" &&
@@ -49,20 +62,20 @@ document.addEventListener("DOMContentLoaded", () => {
         let differentiatedPayment = 0;
         let percents = 0;
         let remainingAmount = amount;
-        let balanceOwed = Number(amount / period).toFixed(2);
+        let balanceOwed = Number(amount / period);
 
         let str = "<table><tr id='columnHeader'><th id=\"number\">№</th><th>Платеж</th><th>Проценты</th><th>Тело кредита</th><th>Остаток</th></tr>";
 
         for (let i = 0; i < period; i++) {
-            percents = Number(remainingAmount * rate).toFixed(2);
-            remainingAmount = Number(remainingAmount - balanceOwed).toFixed(2);
+            percents = Number(remainingAmount * rate);
+            remainingAmount = Number(remainingAmount - balanceOwed);
             differentiatedPayment = Number(percents) + Number(balanceOwed);
             str += `<tr>
                 <td id='number'>${i + 1}</td>
-                <td>${differentiatedPayment}</td>
-                <td>${percents}</td>
-                <td>${balanceOwed}</td>
-                <td>${remainingAmount}</td>
+                <td>${differentiatedPayment.toFixed(2)}</td>
+                <td>${percents.toFixed(2)}</td>
+                <td>${balanceOwed.toFixed(2)}</td>
+                <td>${remainingAmount.toFixed(2)}</td>
             </tr>`;
         }
 
