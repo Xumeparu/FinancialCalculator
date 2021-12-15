@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const creditAmount = document.getElementById("creditAmount");
-    const interestRate = document.getElementById("interestRate");
-    const creditTerm = document.getElementById("creditTerm");
+    const creditAmount = document.getElementById("creditAmount"); // сумма кредита
+    const interestRate = document.getElementById("interestRate"); // процентная ставка
+    const creditTerm = document.getElementById("creditTerm");     // срок кредита
 
-    const familyIncome = document.getElementById("familyIncome");
-    const numberOfFamilyMembers = document.getElementById("numberOfFamilyMembers");
-    const communalPayments = document.getElementById("communalPayments");
+    const familyIncome = document.getElementById("familyIncome");                   // доход семьи
+    const numberOfFamilyMembers = document.getElementById("numberOfFamilyMembers"); // число членов семьи
+    const communalPayments = document.getElementById("communalPayments");           // ком. платежи
 
-    const gettingResult = document.getElementById("gettingResult");
-    const clearingResult = document.getElementById("clearingResult");
+    const gettingResult = document.getElementById("gettingResult");   // получить результат
+    const clearingResult = document.getElementById("clearingResult"); // отчистить результат
 
     let result = document.createElement("div");
     result.id = "result";
